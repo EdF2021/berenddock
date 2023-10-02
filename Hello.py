@@ -30,7 +30,7 @@ def run():
         page_title="Berend-Botje Skills",
         page_icon="👋",
         layout="wide",
-        initial_sidebar_state="expanded"
+        initial_sidebar_state="collapsed"
         
         )
     st.write("### Welkom bij Berend-Botje Skills 👋")
@@ -40,9 +40,14 @@ def run():
 
     st.markdown(
         """
-        ###### Berend-Botje is een slimme AI assistent die je kan helpen bij het uitvoeren van diverse werkzaamheden. 
-        Afhankelijk van de werkzaamheden gebruikt Berend hiervoor 1 of meer  skills.  Deze skills maken gebruik van AI modellen van **openai** zoals ChatGPT.  Het verschil met ChatGPT is dat alle informatie binnen de omgeving van de gebruiker blijft!  
-        ###### 👈 Voorbeelden.  Selecteer in de zijbalk een voorbeeld skill. van Berend-Botje!
+        ###### Berend-Botje is een slimme AI assistent die je helpt om **smart** te werken 😎. Meer bereiken in minder tijd. 
+        De bedoeling is dat Berend-Botje ondersteuning gaat bieden bij een groot aantal taken en werkzaamheden. 
+        Afhankelijk van de werkzaamheden gebruikt Berend hiervoor 1 of meer van zijn skills.  Deze skills zijn op maat toegesneden op de taak die ondersteunt wordt.
+        De skills maken gebruik van AI modellen zoals die van **OpenAi**, de makers van ChatGPT.
+        Het verschil echter is dat Berend de informatie binnen de omgeving van de gebruiker houdt!
+        In deze app laten we de ontwikkelingen zien van de te ontwikkelen Skills aan de hand van proof of concept voorbeeldjes.
+        
+        ###### 👈 Voorbeelden.  Selecteer in de zijbalk een voorbeeld skill.
         1. [De Lesplanner](Lesplan_Demo)
         2. [De Notulist](Mapping_Demo)
         3. [De Dataanalist](DataFrame_Demo)
@@ -50,7 +55,7 @@ def run():
         5. [De Algemene assistent](Chat_Demo)
         6. [De Chatbot](https://berend-botje-skills.streamlit.app)
         
-        ##### Niet vergeten!! Het is werk onder constructie...
+        ##### Disclaimer. Work under construction.
         
     """
     )
