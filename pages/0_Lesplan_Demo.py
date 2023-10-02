@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 
 from streamlit import sidebar
-import core.ui
+# import core.ui
 from core.ui import (
     wrap_doc_in_html,
     is_query_valid,
