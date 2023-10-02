@@ -3,7 +3,7 @@ import openai
 import streamlit as st
 from PIL import Image
 
-openai_api_key = os.getenv("OPENAI_API_KEY")
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 image = Image.open('images/producttoer.jpeg')
 st.set_page_config(
