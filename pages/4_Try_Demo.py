@@ -59,7 +59,7 @@ bootstrap_caching()
 # sidebar()
 
 # sleutel = os.getenv("OPENAI_API_KEY")
-openai_api_key = os.getenv("OPENAI_API_KEY")
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 st.session_state.get("OPENAI_API_KEY")
 
