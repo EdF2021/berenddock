@@ -17,7 +17,7 @@ frozenlist
 fsspec
 gitdb
 gitpython
-greenlet
+# greenlet
 huggingface-hub
 idna
 importlib-metadata
@@ -32,19 +32,19 @@ marshmallow-enum
 marshmallow
 mdurl
 multidict
-mypy-extensions
+# mypy-extensions
 numexpr
 numpy
 openai
-openapi-schema-pydantic
+# openapi-schema-pydantic
 openpyxl
 packaging
 pandas
 pillow
 protobuf
-pyarrow
+# pyarrow
 pycryptodome
-pydantic
+# pydantic
 pydeck
 pygments
 pympler
@@ -62,7 +62,7 @@ rich
 rpds-py
 safetensors
 six
-smmap
+# smmap
 sqlalchemy
 streamlit
 pandas
@@ -93,4 +93,3 @@ validators
 watchdog
 yarl
 zipp
-streamlit
