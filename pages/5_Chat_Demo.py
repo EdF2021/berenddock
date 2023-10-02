@@ -25,7 +25,7 @@ with col2:
 # openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "gpt4"
+    st.session_state["openai_model"] = "gpt-4"
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
