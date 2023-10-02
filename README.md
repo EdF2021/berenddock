@@ -1,7 +1,19 @@
-# Welcome to streamlit
+# Berend-Botje Skills
+>**Ed. de Feber**
+>**27-09-2023**
+>>E-Mail: [Ed. de Feber](mailto:ed.de.feber@outlook.com) 
+>>Website: [Berend-Botje](https://berend-botje.azurewebsites.net)
 
-This is the app you get when you run `streamlit hello`, extracted as its own app.
+Berend-Botje Skills is een verzameling van Smart, op AI gebaseerde Apps, die tot doel hebben werkzaamheden van gebruikers makkelijker te maken. De apps zijn op gebaseerd op State of the Art AI modellen, waaronder die van OpenAi zoals VhatGPT, en inzichten uit de data ondersteuning.
 
-Edit [Hello.py](./Hello.py) to customize this app to your heart's desire. ❤️
+Accurate answers and instant citations for your documents.
 
-Check it out on [Streamlit Community Cloud](https://st-hello-app.streamlit.app/)
+## 🔧 Features
+
+- Upload documents 📁(PDF, DOCX, TXT) and answer questions about them.
+- Cite sources📚 for the answers, with excerpts from the text.
+
+3. Run the Streamlit server🚀
+
+## 🚀 Upcoming Features
+
