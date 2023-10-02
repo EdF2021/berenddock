@@ -9,7 +9,7 @@ from typing import NoReturn
 
 logger = get_logger(__name__)
 
-openai_api_key = os.getenv("OPENAI_API_KEY")
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 def wrap_doc_in_html(docs: List[Document]) -> str:
     """Schrijf elke pagina in het document gescheiden door een nieuwe regel in <p> tags"""
