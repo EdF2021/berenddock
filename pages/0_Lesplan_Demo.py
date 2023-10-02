@@ -1,4 +1,3 @@
-import os 
 import streamlit as st
 from PIL import Image
 
@@ -35,9 +34,7 @@ st.set_page_config(
         layout="wide",
         initial_sidebar_state="expanded" )
 
-
 col1, col2 = st.columns(2)
-
 with col1:
     st.header("Berend-Botje Skills" )
     st.subheader("De Lesplanner\n*waarom zou je moeilijk doen ....?*")
