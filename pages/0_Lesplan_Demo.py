@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 
 from streamlit import sidebar
-from core import ui
+from core.ui import ui
 from ui import (
     wrap_doc_in_html,
     is_query_valid,
@@ -45,7 +45,7 @@ st.markdown("""##### De Lesplanner ondersteunt docenten bij het maken van een le
 
 with st.sidebar:
     st.markdown("""
-    #### Hoe werkt de Lesplanner? 
+    ### Hoe werkt de Lesplanner? 
     - **Upload een pdf, docx, of txt file📄**
     - **Stel je vraag over het document 💬**
     - **Laat Berend je lesplan maken**
@@ -55,7 +55,7 @@ with st.sidebar:
 # Enable caching for expensive functions
 bootstrap_caching()
 
-# sidebar()
+sidebar()
 
 # sleutel = os.getenv("OPENAI_API_KEY")
 openai_api_key = st.secrets["OPENAI_API_KEY"]
