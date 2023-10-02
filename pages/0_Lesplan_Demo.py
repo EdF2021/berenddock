@@ -2,8 +2,8 @@ import streamlit as st
 from PIL import Image
 
 from streamlit import sidebar
-import ui
-from ui import (
+# import ui
+from core.ui import (
     wrap_doc_in_html,
     is_query_valid,
     is_file_valid,
