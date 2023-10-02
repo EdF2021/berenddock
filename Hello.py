@@ -22,9 +22,6 @@ openai_api_key = st.secrets["OPENAI_API_KEY"]
 LOGGER = get_logger(__name__)
 image = Image.open("images/producttoer.jpeg")
 
-image = Image.open('images/producttoer.jpeg')
-
-
 LOGGER = get_logger(__name__)
 ENCODINGS = 'cl100k_base'
 
@@ -33,7 +30,7 @@ def run():
         page_title="Berend-Botje Skills",
         page_icon="👋",
         layout="wide",
-        initial_sidebar_state="collapsed"
+        initial_sidebar_state="expanded"
         
         )
     st.write("### Welkom bij Berend-Botje Skills 👋")
@@ -53,7 +50,7 @@ def run():
         5. [De Algemene assistent](Chat_Demo)
         6. [De Chatbot](https://berend-botje-skills.streamlit.app)
         
-        #### Niet vergeten!! Het is werk onder constructie...
+        ##### Niet vergeten!! Het is werk onder constructie...
         
     """
     )
