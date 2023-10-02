@@ -1,4 +1,3 @@
-import os
 from typing import List
 import streamlit as st
 from langchain.docstore.document import Document
