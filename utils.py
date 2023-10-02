@@ -14,9 +14,7 @@
 
 import inspect
 import textwrap
-
 import streamlit as st
-
 
 def show_code(demo):
     """Showing the code of the demo."""
