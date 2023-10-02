@@ -5,7 +5,7 @@ async-timeout
 attrs
 blinker
 cachetools
-certifi
+# certifi
 charset-normalizer
 colorama
 dataclasses-json
@@ -14,12 +14,12 @@ docx2txt
 faiss-cpu
 filelock
 frozenlist
-fsspec
+# fsspec
 gitdb
 gitpython
 # greenlet
 huggingface-hub
-idna
+# idna
 importlib-metadata
 jinja2
 jsonschema-specifications
@@ -28,8 +28,8 @@ langchain
 langchainplus-sdk
 markdown-it-py
 markupsafe
-marshmallow-enum
-marshmallow
+# marshmallow-enum
+# marshmallow
 mdurl
 multidict
 # mypy-extensions
@@ -41,39 +41,37 @@ openpyxl
 packaging
 pandas
 pillow
-protobuf
+# protobuf
 # pyarrow
-pycryptodome
+# pycryptodome
 # pydantic
 pydeck
 pygments
-pympler
-pymupdf
+# pympler
+# pymupdf
 python-dateutil
 python-dotenv
-pytz-deprecation-shim
-pytz
+# pytz-deprecation-shim
+# pytz
 pyyaml
 openpyxl
 referencing
 regex
 requests
 rich
-rpds-py
+# rpds-py
 safetensors
 six
 # smmap
 sqlalchemy
-streamlit
 pandas
 numpy
 streamlit
 streamlit-chat
-openai
 redis
 requests
 tiktoken
-pdftotext
+# pdftotext
 pdf_extractor
 pillow
 tenacity
@@ -82,7 +80,7 @@ tokenizers
 toml
 toolz
 tornado
-tqdm
+# tqdm
 transformers
 typing-extensions
 typing-inspect
