@@ -3,7 +3,7 @@ from PIL import Image
 
 from streamlit import sidebar
 # from core import ui
-from ui import (
+from core.ui import (
     wrap_doc_in_html,
     is_query_valid,
     is_file_valid,
