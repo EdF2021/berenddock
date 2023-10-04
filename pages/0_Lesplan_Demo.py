@@ -11,6 +11,7 @@ from ui import (
     is_open_ai_key_valid,
     display_file_read_error,
 )
+import core
 
 from core.caching import bootstrap_caching
 from core.parsing import read_file
