@@ -1,0 +1,42 @@
+name: Trigger auto deployment for berendcontainerapp
+
+# When this action will be executed
+on:
+  # Automatically trigger it when detected changes in repo
+  push:
+    branches: 
+      [ main ]
+    paths:
+    - '**'
+    - '.github/workflows/berendcontainerapp-AutoDeployTrigger-44876142-6183-4685-8fc6-23d21b56a41c.yml'
+
+  # Allow manual trigger 
+  workflow_dispatch:
+      
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout to the branch
+        uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.BERENDCONTAINERAPP_AZURE_CREDENTIALS }}
+
+      - name: Build and push container image to registry
+        uses: azure/container-apps-deploy-action@v1
+        with:
+          appSourcePath: ${{ github.workspace }} 
+          registryUrl: berendbot.azurecr.io
+          registryUsername: ${{ secrets.BERENDCONTAINERAPP_REGISTRY_USERNAME }}
+          registryPassword: ${{ secrets.BERENDCONTAINERAPP_REGISTRY_PASSWORD }}
+          containerAppName: berendcontainerapp
+          resourceGroup: DefaultResourceGroup-WEU
+          imageToBuild: berendbot.azurecr.io/berendcontainerapp:${{ github.sha }}
+          
+
+     
+
