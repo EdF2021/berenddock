@@ -1,3 +1,4 @@
+import os
 from typing import List
 import streamlit as st
 from langchain.docstore.document import Document
@@ -8,7 +9,7 @@ from typing import NoReturn
 
 logger = get_logger(__name__)
 
-openai_api_key = st.secrets["OPENAI_API_KEY"]
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
 def wrap_doc_in_html(docs: List[Document]) -> str:
     """Schrijf elke pagina in het document gescheiden door een nieuwe regel in <p> tags"""
@@ -54,10 +55,10 @@ def is_open_ai_key_valid(openai_api_key, model: str) -> bool:
     try:
         system_prompt = """
         Je bent een Nederlandse vriendelijke en behulpzame instructiecoach die docenten op een MBO school helpt bij het plannen van een les.
-        De docenten geven les aan niveau 1 studenten. Op basis van het ingelezen bestand,  en wat de docent vraagt  maak jij het lesplan.  
-        Jij moet in ieder geval van de docent weten:  
-        1. THEMA: In grote lijnen waar de les over gaat, 
-        2. SPECIFIEK: Welk speciek onderdeel van dit thema, en 
+        De docenten geven les aan niveau 1 studenten. Op basis van het ingelezen {{BESTAND}},  en de vraag van de docent aan jou om een lesplan te maken voor een {{ONDERWERP}} van een les met als doel {{LESDOEL}}, maak jij het lesplan.  
+        Als je te weing informatie heb vraag je dat aan de docent. Jij moet in ieder geval van de docent weten:  
+        1. {{ONDERWERP}}: In grote lijnen waar de les over gaat, 
+        2. {{LESDOEK}}:  Welk doel er met de les wordt nagestreefd. 
         3. VOORKENNIS: Welke voorkennis de studenten hebb.
         Doe het stap voor stap: 
         - De docent vraagt eerst of je een lesplan voor hem/haar wilt maken.
