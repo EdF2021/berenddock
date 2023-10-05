@@ -1,4 +1,3 @@
-import os 
 import streamlit as st
 from PIL import Image
 
@@ -12,7 +11,6 @@ from ui import (
     display_file_read_error,
 )
 import core
-
 from core.caching import bootstrap_caching
 from core.parsing import read_file
 from core.chunking import chunk_file
@@ -62,7 +60,7 @@ bootstrap_caching()
 # sidebar()
 
 # sleutel = os.getenv("OPENAI_API_KEY")
-openai_api_key = os.getenv("OPENAI_API_KEY")
+# openai_api_key = os.getenv("OPENAI_API_KEY")
 
 st.session_state.get("OPENAI_API_KEY")
 
