@@ -18,8 +18,8 @@ from PIL import Image
 
 import openai
 
-openai_api_key = os.getenv("OPENAI_API_KEY")
-# openai_api_key = st.secrets["OPENAI_API_KEY"]
+# openai_api_key = os.getenv("OPENAI_API_KEY")
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 
 # IMAGES_DIR = os.path.join(os.path.dirname(__file__), 'images/productoer.jpeg')
