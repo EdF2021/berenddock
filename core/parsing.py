@@ -4,6 +4,7 @@ import re
 
 import docx2txt
 from langchain.docstore.document import Document
+!pip install fitz
 import fitz
 from hashlib import md5
 
