@@ -22,7 +22,7 @@ import tiktoken
 
 EMBEDDING = "openai"
 VECTOR_STORE = "faiss"
-MODEL_LIST = ["gpt-3.5-turbo", "gpt-4","gpt-3.5-turbo-16k"]
+MODEL_LIST = ["gpt-3.5-turbo", "gpt-4"]
 
 image = Image.open('images/producttoer.jpeg')
 # Uncomment to enable debug mode
@@ -58,8 +58,7 @@ with st.sidebar:
 bootstrap_caching()
 
 # sidebar()
-
-# sleutel = os.getenv("OPENAI_API_KEY")
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 # openai_api_key = os.getenv("OPENAI_API_KEY")
 
 st.session_state.get("OPENAI_API_KEY")
@@ -81,8 +80,8 @@ uploaded_file = st.file_uploader(
 model: str = st.selectbox("Model", options=MODEL_LIST)  # type: ignore
 
 with st.expander("Geavanceerd"):
-    return_all_chunks = st.checkbox("Show all chunks retrieved from vector search")
-    show_full_doc = st.checkbox("Show parsed contents of the document")
+    return_all_chunks = st.checkbox("Toon alle chunks afkomstig uit de vector search")
+    show_full_doc = st.checkbox("Toom de geparseerde inhoud van het document")
 
 
 if not uploaded_file:
