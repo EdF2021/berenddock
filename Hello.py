@@ -12,54 +12,60 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import os
 import streamlit as st
-from streamlit.logger import get_logger
 from PIL import Image
+
 import openai
 
+# openai_api_key = os.getenv("OPENAI_API_KEY")
 openai_api_key = st.secrets["OPENAI_API_KEY"]
 
-LOGGER = get_logger(__name__)
+
+# IMAGES_DIR = os.path.join(os.path.dirname(__file__), 'images/productoer.jpeg')
+
+
 image = Image.open("images/producttoer.jpeg")
+
+
+from streamlit.logger import get_logger
+
 
 LOGGER = get_logger(__name__)
 ENCODINGS = 'cl100k_base'
 
 def run():
     st.set_page_config(
-        page_title="Berend-Botje Skills",
-        page_icon="👋",
-        layout="wide",
-        initial_sidebar_state="collapsed"
-        
-        )
-    st.write("### Welkom bij Berend-Botje Skills 👋")
-    st.image(image, caption=None, width=240, use_column_width=None, clamp=True, channels="RGB", output_format="png")
+            page_title="Berend-Botje Skills",
+            page_icon="👋",
+            layout="wide",
+            initial_sidebar_state="collapsed"
+            )
     
-    st.sidebar.success("Kies één van Berend's skills")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("""
+        ## Welkom bij Berend-Botje Skills 👋 """)
 
-    st.markdown(
-        """
-        ###### Berend-Botje is een slimme AI assistent die je helpt om **smart** te werken 😎. Meer bereiken in minder tijd. 
-        De bedoeling is dat Berend-Botje ondersteuning gaat bieden bij een groot aantal taken en werkzaamheden. 
-        Afhankelijk van de werkzaamheden gebruikt Berend hiervoor 1 of meer van zijn skills.  Deze skills zijn op maat toegesneden op de taak die ondersteunt wordt.
-        De skills maken gebruik van AI modellen zoals die van **OpenAi**, de makers van ChatGPT.
-        Het verschil echter is dat Berend de informatie binnen de omgeving van de gebruiker houdt!
-        In deze app laten we de ontwikkelingen zien van de te ontwikkelen Skills aan de hand van proof of concept voorbeeldjes.
-        
-        ###### 👈 Voorbeelden.  Selecteer in de zijbalk een voorbeeld skill.
-        1. [De Lesplanner](Lesplan_Demo)
-        2. [De Notulist](Mapping_Demo)
-        3. [De Dataanalist](DataFrame_Demo)
-        4. [De Datavormgever](Plotting_Demo)
-        5. [De Algemene assistent](Chat_Demo)
-        6. [De Chatbot](https://berend-botje-skills.streamlit.app)
-        
-        ##### Disclaimer. Work under construction.
-        
-    """
-    )
+        st.markdown("""
+        ##### Berend-Botje is een slimme AI assistent die je helpt om *smart* te werken.""")
+        st.markdown("""
+        ###### Afhankelijk van de taak zal Berend een keuze maken welke skills er nodig zijn. De skills zijn allen **Powered by OpenAI** en maken gebruik van AI modellen als ChatGPT. Het verschil met ChatGPT is dat alle informatie binnen de omgeving van de gebruiker blijft!"""
+        )
+    with col2:
+        st.image(image, caption=None, use_column_width=True, clamp=True, channels="RGB", output_format="png")
+    
+    # st.sidebar.success("Kies één van Berend's skills")
+    st.markdown(""" ##### 👈 Voorbeelden.
+    **1. [De Lesplanner](Lesplan_Demo)**
+    **2. [De Notulist](Mapping_Demo)**
+    **3. [De Dataanalist](DataFrame_Demo)**
+    **4. [De Datavormgever](Plotting_Demo)**
+    **5. [De Chatbot](Chat_Demo)**
+    **6. [De Chatbot](https://berend-botje-skills.streamlit.app)**
 
+    **Disclaimer:Het is werk onder constructie...** 
+    """)
 
 
 if __name__ == "__main__":
