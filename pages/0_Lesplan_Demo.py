@@ -1,16 +1,14 @@
 import streamlit as st
 from PIL import Image
-
 from streamlit import sidebar
-import ui
 from ui import (
     wrap_doc_in_html,
     is_query_valid,
     is_file_valid,
     is_open_ai_key_valid,
-    display_file_read_error,
+    display_file_read_error
 )
-import core
+
 from core.caching import bootstrap_caching
 from core.parsing import read_file
 from core.chunking import chunk_file
