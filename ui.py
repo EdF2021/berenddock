@@ -2,7 +2,7 @@ import os
 from typing import List
 import streamlit as st
 from langchain.docstore.document import Document
-import core
+# import core
 from core.parsing import File
 import openai
 from streamlit.logger import get_logger
