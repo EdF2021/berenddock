@@ -8,7 +8,7 @@ from ui import (
     is_open_ai_key_valid,
     display_file_read_error
 )
-
+import core
 from core.caching import bootstrap_caching
 from core.parsing import read_file
 from core.chunking import chunk_file
@@ -16,6 +16,8 @@ from core.embedding import embed_files
 from core.utils import get_llm
 from core.qa import query_folder
 import tiktoken
+import openai
+
 
 
 EMBEDDING = "openai"
