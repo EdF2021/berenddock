@@ -15,7 +15,7 @@
 import os
 import streamlit as st
 from PIL import Image
-import ui
+# import ui
 import openai
 
 # openai_api_key = os.getenv("OPENAI_API_KEY")
