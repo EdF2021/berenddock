@@ -1,8 +1,9 @@
 import os
+import app
 from typing import List
 import streamlit as st
 from langchain.docstore.document import Document
-# mport core
+from app import core
 from core.parsing import File
 import openai
 from streamlit.logger import get_logger
